@@ -1,0 +1,25 @@
+Top	5,759,210.000000	m
+Bottom	5,647,560.000000	m
+Left	429,850.000000	m
+Right	570,150.000000	m
+
+Projected Coordinate System	NAD_1983_Transverse_Mercator
+Projection	Transverse Mercator
+Authority	Custom
+Linear Unit	Meters (1.0)
+False Easting	500000.0
+False Northing	0.0
+Central Meridian	-115.0
+Scale Factor	0.9992
+Latitude Of Origin	0.0
+
+Geographic Coordinate System	NAD 1983
+WKID	4269
+Authority	EPSG
+Angular Unit	Degree (0.0174532925199433)
+Prime Meridian	Greenwich (0.0)
+Datum	D North American 1983
+Spheroid	GRS 1980
+Semimajor Axis	6378137.0
+Semiminor Axis	6356752.314140356
+Inverse Flattening	298.257222101
