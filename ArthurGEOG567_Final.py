@@ -191,6 +191,21 @@ try:
     else:
         arcpy.AddError("Failed to add point feature class to the map.")
 
+    # Print current layer order
+    arcpy.AddMessage("Current layer order:")
+    for i, layer in enumerate(m.listLayers()):
+        arcpy.AddMessage(f"{i}: {layer.name}")
+
+    try:
+        # Code block that might raise an error
+        arcpy.SomeTool_management(input, output)
+    except arcpy.ExecuteError:
+        # Handle tool-specific errors
+        print(f"Error with tool execution: {arcpy.GetMessages(2)}")
+    except Exception as e:
+        # Handle unexpected errors
+        print(f"Unexpected error: {e}")
+
     # Clean up temporary datasets
     arcpy.Delete_management(temp_table)
     arcpy.Delete_management(temp_fc_wgs84)
