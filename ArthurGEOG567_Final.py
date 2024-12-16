@@ -165,11 +165,11 @@ except Exception as e:
     raise
 
 # Add the point feature class to the current map
-output_fc_layer = m.addDataFromPath(output_fc_path)
+output_fc_layer = m.addDataFromPath(output_fc)
 if output_fc_layer:
     arcpy.AddMessage("Point feature class added to the map.")
     try:
-        m.moveLayer(output_fc_layer, 0)  # Move point layer to position 0 (top of the stack)
+        m.moveLayer(output_fc_layer, "TOP")  # Move point layer to position 0 (top of the stack)
         arcpy.AddMessage("Point layer moved to the top of the map.")
     except Exception as e:
         arcpy.AddError(f"Error moving the point layer to the top: {str(e)}")
